@@ -20,16 +20,17 @@ public class ScoreDAO implements IScoreDAO {
 
 	@Override
 	public List<ScoreVO> selectAllScores() {
-		return null;
+		return scoreList;
 	}
 
 	@Override
 	public void deleteScore(int stuNum) {
+		scoreList.remove(stuNum);
 	}
 
 	@Override
 	public ScoreVO selectOne(int stuNum) {
-		return null;
+		return scoreList.get(stuNum);
 	}
 
 }
