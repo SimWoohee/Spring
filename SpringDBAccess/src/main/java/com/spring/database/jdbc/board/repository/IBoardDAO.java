@@ -13,5 +13,13 @@ public interface IBoardDAO {
 	
 	//글 작성
 	void insertBoard(BoardVO board);
+	
+	void deleteBoard(int index);
+	
+	BoardVO getContent(int index);
+	
+	void updateBoard(BoardVO board);
+	
+	List<BoardVO> getSearchList(String keyword);
 
 }

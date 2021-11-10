@@ -26,4 +26,26 @@ public class BoardService implements IBoardService {
 
 	}
 
+	@Override
+	public void deleteBoard(int index) {
+		dao.deleteBoard(index);
+		
+	}
+
+	@Override
+	public BoardVO getContent(int index) {
+		return dao.getContent(index);
+	}
+
+	@Override
+	public void updateBoard(BoardVO board) {
+		dao.updateBoard(board);
+	}
+
+	@Override
+	public List<BoardVO> getSearchList(String keyword) {
+		keyword = "%" + keyword + "%";
+		return dao.getSearchList(keyword);
+	}
+	
 }
