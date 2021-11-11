@@ -72,9 +72,10 @@ public class BoardController {
 		return "redirect:/board/content?boardNo="+article.getBoardNo();
 	}
 	
-	@PostMapping("/searchList")
+	//게시글 검색 처리요청
+	@GetMapping("/searchList")
 	public String searchList(String keyword, Model model) {
-		List<BoardVO> list = service.getSearchList(keyword);
+		List<BoardVO> list = service.getSearchList(keyword);		
 		model.addAttribute("articles", list);
 		return "board/list";
 	}
